@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Civic Issue Reporting | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="dashboard">
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">🌐</span>
+          <span>CivicFix</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="admin.html">Admin</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-action="toggle-theme" title="Toggle theme">🌓</button>
+          <a class="btn" href="report.html">Report Issue</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h1 class="section-title">Community Dashboard</h1>
+        <span class="chip">Live</span>
+      </div>
+
+      <div class="card">
+        <div class="filters">
+          <input id="q" placeholder="Search by title, description, location...">
+          <select id="filter-type">
+            <option value="all">All Categories</option>
+            <option>Road</option>
+            <option>Lighting</option>
+            <option>Sanitation</option>
+            <option>Water</option>
+            <option>Safety</option>
+            <option>Other</option>
+          </select>
+          <select id="filter-status">
+            <option value="all">All Statuses</option>
+            <option>Pending</option>
+            <option>In Progress</option>
+            <option>Resolved</option>
+          </select>
+        </div>
+        <div class="issue-grid" id="issues"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> CivicFix</div>
+        <div class="muted">Browse, upvote, and share</div>
+      </div>
+    </footer>
+
+    <div class="banner"><div class="container inner"><span data-banner-msg></span><button class="btn ghost" onclick="this.closest('.banner').classList.remove('show')">Dismiss</button></div></div>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+

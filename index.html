@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Civic Issue Reporting | Home</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="home">
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">🌐</span>
+          <span>CivicFix</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="admin.html">Admin</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-action="toggle-theme" title="Toggle theme">🌓</button>
+          <a class="btn" href="report.html">Report Issue</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1 class="title-xl">Crowdsourced <span class="accent">Civic Issue</span> Reporting & Resolution</h1>
+            <p class="subtitle">Empower citizens to report, track, and resolve local issues with transparency and collaboration.</p>
+            <div class="hero-cta">
+              <button class="btn" data-goto="report">Report an Issue</button>
+              <a class="btn ghost" href="dashboard.html">View Dashboard</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="section-head">
+              <h2 class="section-title">Live Snapshot</h2>
+              <span class="chip">Community Powered</span>
+            </div>
+            <p class="muted">Browse reported issues, upvote critical ones, and watch progress as your city improves.</p>
+            <div class="spacer"></div>
+            <div class="grid-3">
+              <div class="card center">
+                <div class="title-xl">🛠️</div>
+                <div class="muted">In Progress</div>
+              </div>
+              <div class="card center">
+                <div class="title-xl">✅</div>
+                <div class="muted">Resolved</div>
+              </div>
+              <div class="card center">
+                <div class="title-xl">📣</div>
+                <div class="muted">New Reports</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-head">
+          <h2 class="section-title">Features</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card"><h3>Report & Track</h3><p class="muted">Submit issues with location and images. Track status from Pending to Resolved.</p></div>
+          <div class="card"><h3>Community Upvotes</h3><p class="muted">Upvote high-impact issues to help prioritize action.</p></div>
+          <div class="card"><h3>Admin Analytics</h3><p class="muted">Visual insights into categories and resolution progress.</p></div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-head">
+          <h2 class="section-title">How It Works</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card"><span class="chip">1</span><h3>Report</h3><p class="muted">Citizens submit issues via a simple form.</p></div>
+          <div class="card"><span class="chip">2</span><h3>Engage</h3><p class="muted">Community upvotes and discusses priorities.</p></div>
+          <div class="card"><span class="chip">3</span><h3>Resolve</h3><p class="muted">Authorities update status until completion.</p></div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="grid-2">
+          <div class="card">
+            <h3>About CivicFix</h3>
+            <p class="muted">An open, lightweight platform to connect citizens and city services for a better, cleaner, and safer community.</p>
+          </div>
+          <div class="card">
+            <h3>Get Involved</h3>
+            <p class="muted">Start by reporting an issue in your neighborhood and share the dashboard with your community.</p>
+            <div class="spacer"></div>
+            <a class="btn" href="report.html">Report Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> CivicFix</div>
+        <div class="muted">Built with ❤️ for communities</div>
+      </div>
+    </footer>
+
+    <div class="banner"><div class="container inner"><span data-banner-msg></span><button class="btn ghost" onclick="this.closest('.banner').classList.remove('show')">Dismiss</button></div></div>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+

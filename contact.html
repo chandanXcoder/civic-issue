@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Civic Issue Reporting | Contact</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">🌐</span>
+          <span>CivicFix</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="admin.html">Admin</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-action="toggle-theme" title="Toggle theme">🌓</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h1 class="section-title">Contact Us</h1>
+        <span class="chip">We'd love to hear from you</span>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <form id="contact-form">
+            <div class="field"><label>Name</label><input name="name" placeholder="Your name"></div>
+            <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@example.com"></div>
+            <div class="field"><label>Message</label><textarea name="message" placeholder="Tell us how we can help"></textarea></div>
+            <div><input type="submit" class="btn" value="Send"></div>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Our Location</h3>
+          <iframe title="Office Map" style="width:100%; aspect-ratio: 16/12; border:0; border-radius:12px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=City%20Hall&output=embed"></iframe>
+          <p class="help">This is a placeholder map. Replace with your office location.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> CivicFix</div>
+        <div class="muted">We reply within 2 business days</div>
+      </div>
+    </footer>
+
+    <div class="banner"><div class="container inner"><span data-banner-msg></span><button class="btn ghost" onclick="this.closest('.banner').classList.remove('show')">Dismiss</button></div></div>
+
+    <script src="script.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thanks! Your message has been sent.');
+        e.target.reset();
+      });
+    </script>
+  </body>
+  </html>
+
+

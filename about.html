@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Civic Issue Reporting | About</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">🌐</span>
+          <span>CivicFix</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="admin.html">Admin</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-action="toggle-theme" title="Toggle theme">🌓</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h1 class="section-title">About CivicFix</h1>
+        <span class="chip">Open Collaboration</span>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p class="muted">CivicFix bridges the gap between citizens and local authorities by enabling transparent, crowdsourced reporting and efficient resolution of everyday civic issues.</p>
+        </div>
+        <div class="card">
+          <h3>Values</h3>
+          <ul class="muted">
+            <li>Transparency and accountability</li>
+            <li>Community-driven prioritization</li>
+            <li>Open standards and accessibility</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> CivicFix</div>
+        <div class="muted">Together for better cities</div>
+      </div>
+    </footer>
+
+    <div class="banner"><div class="container inner"><span data-banner-msg></span><button class="btn ghost" onclick="this.closest('.banner').classList.remove('show')">Dismiss</button></div></div>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+

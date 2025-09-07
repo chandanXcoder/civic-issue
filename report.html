@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Civic Issue Reporting | Report</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="report">
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">🌐</span>
+          <span>CivicFix</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="admin.html">Admin</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-action="toggle-theme" title="Toggle theme">🌓</button>
+          <a class="btn" href="dashboard.html">View Dashboard</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="section-head">
+        <h1 class="section-title">Report an Issue</h1>
+        <span class="chip">Help improve your city</span>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <form id="report-form">
+            <div class="form-row">
+              <div class="field"><label for="name">Name</label><input required id="name" name="name" placeholder="Your full name"></div>
+              <div class="field"><label for="email">Email</label><input required type="email" id="email" name="email" placeholder="you@example.com"></div>
+            </div>
+            <div class="field"><label for="title">Issue Title</label><input id="title" name="title" placeholder="Short title, e.g., Pothole on Main St"></div>
+            <div class="form-row">
+              <div class="field"><label for="location">Location</label><input required id="location" name="location" placeholder="Address or landmark"></div>
+              <div class="field"><label for="type">Issue Type</label>
+                <select required id="type" name="type">
+                  <option value="">Select category</option>
+                  <option>Road</option>
+                  <option>Lighting</option>
+                  <option>Sanitation</option>
+                  <option>Water</option>
+                  <option>Safety</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="description">Description</label><textarea required id="description" name="description" placeholder="Describe the issue and its impact"></textarea></div>
+            <div class="field"><label for="image">Upload Image</label><input type="file" id="image" name="image" accept="image/*"></div>
+            <div id="form-status" class="error"></div>
+            <div>
+              <input type="submit" class="btn" value="Submit Issue">
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Map Preview</h3>
+          <iframe id="map-frame" title="Location Map" style="width:100%; aspect-ratio: 16/12; border:0; border-radius:12px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p class="help">Map updates as you type the location. Powered by Google Maps embed.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> CivicFix</div>
+        <div class="muted">Thank you for taking action</div>
+      </div>
+    </footer>
+
+    <div class="banner"><div class="container inner"><span data-banner-msg></span><button class="btn ghost" onclick="this.closest('.banner').classList.remove('show')">Dismiss</button></div></div>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+
