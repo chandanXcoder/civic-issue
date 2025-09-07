@@ -153,6 +153,7 @@ footer .footer-inner { display: flex; justify-content: space-between; gap: 16px;
   .issue-grid { grid-template-columns: 1fr 1fr; }
   .admin-grid { grid-template-columns: 1fr; }
 }
+
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .grid-3, .grid-2, .issue-grid { grid-template-columns: 1fr; }
